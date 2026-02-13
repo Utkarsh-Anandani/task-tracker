@@ -56,6 +56,8 @@ export async function POST(req: NextRequest) {
     const newAccessToken = generateAccessToken({
       userId: payload.userId,
       role: user?.role || "USER",
+      name: user.name,
+      email: user.email,
     });
 
     return NextResponse.json({
