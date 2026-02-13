@@ -78,7 +78,7 @@ function clearTokens() {
   localStorage.removeItem(REFRESH_KEY);
 }
 
-function parseJwt(token: string): UserType | null {
+export function parseJwt(token: string): UserType | null {
   try {
     const base64 = token.split(".")[1];
     const decoded = JSON.parse(atob(base64));
