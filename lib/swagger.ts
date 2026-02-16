@@ -13,6 +13,9 @@ export const swaggerSpec = swaggerJSDoc({
       {
         url: "http://localhost:3000/api/v1",
       },
+      {
+        url: "https://task-tracker-utkarsh-anandanis-projects.vercel.app/api/v1",
+      }
     ],
 
     components: {
