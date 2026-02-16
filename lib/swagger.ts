@@ -15,7 +15,7 @@ export const swaggerSpec = swaggerJSDoc({
       },
       {
         url: "https://task-tracker-utkarsh-anandanis-projects.vercel.app/api/v1",
-      }
+      },
     ],
 
     components: {
@@ -128,6 +128,9 @@ export const swaggerSpec = swaggerJSDoc({
       },
     ],
   },
-
-  apis: ["./app/api/v1/**/*.ts"],
+  apis: [
+    process.env.NODE_ENV === "production"
+      ? "./.next/server/app/api/v1/**/*.js"
+      : "./app/api/v1/**/*.ts",
+  ],
 });
