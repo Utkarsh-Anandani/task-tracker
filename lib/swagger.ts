@@ -1,3 +1,4 @@
+import path from "path";
 import swaggerJSDoc from "swagger-jsdoc";
 
 export const swaggerSpec = swaggerJSDoc({
@@ -129,5 +130,5 @@ export const swaggerSpec = swaggerJSDoc({
     ],
   },
 
-  apis: ["app/api/v1/**/*.ts"],
+  apis: [path.join(process.cwd(), "app/api/v1/**/*.ts"), path.join(process.cwd(), "app/api/v1/**/*.js")],
 });
